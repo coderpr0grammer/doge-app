@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { View, FlatList, Text, SafeAreaView } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
+import React, { useState } from "react";
+import { View, FlatList, Text, SafeAreaView, Image } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import SvgUri from "react-native-svg-uri";
+import Character from '../../../../assets/character.png'
 
 // const usersCollection = firestore().collection('posts');
 
@@ -9,28 +11,17 @@ const Feed = (props) => {
     <>
       <View
         style={{
-          width: '100%',
-          height: 100,
+          width: "100%",
+          height: 180,
           marginBottom: 10,
-          borderWidth: 1,
-          borderColor: 'orange',
-          borderRadius: 10,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-        <Text style={{ marginBottom: 5 }}>{title}</Text>
-      </View>
-      <View
-        style={{
-          width: '100%',
-          height: 100,
-          marginBottom: 10,
-          borderWidth: 1,
-          borderColor: 'orange',
-          borderRadius: 10,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
+          borderBottomWidth: 1,
+          borderColor: "orange",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Image source={Character}
+        />
         <Text style={{ marginBottom: 5 }}>{title}</Text>
       </View>
     </>
@@ -40,13 +31,14 @@ const Feed = (props) => {
 
   return (
     <LinearGradient
-      colors={['orange', '#988430']}
+      colors={["orange", "#988430"]}
       start={[0.0, 0.0]}
       end={[1.0, 1.0]}
       style={{
         flex: 1,
-        width: '100%',
-      }}>
+        width: "100%",
+      }}
+    >
       <SafeAreaView>
         <FlatList
           onRefresh={() => {
@@ -59,9 +51,8 @@ const Feed = (props) => {
           refreshing={refreshing}
           showsVerticalScrollIndicator={false}
           data={[1, 2, 3, 4, 5, 6]}
-          renderItem={({ item }) => <Item title={'hello'} />}
+          renderItem={({ item }) => <Item title={"hello"} />}
           contentContainerStyle={{
-            padding: 10,
             paddingBottom: 80,
           }}
         />

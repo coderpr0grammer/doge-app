@@ -321,7 +321,7 @@ export const AppNavigator = () => {
             headerBackground: () => (
               <BlurView
                 tint="light"
-                intensity={10}
+                intensity={5}
                 style={StyleSheet.absoluteFill}
               />
             ),
