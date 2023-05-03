@@ -16,13 +16,15 @@ const Feed = (props) => {
           marginBottom: 10,
           borderBottomWidth: 1,
           borderColor: "orange",
-          justifyContent: "center",
-          alignItems: "center",
+          flex: 1,
+          padding: 10
         }}
       >
-        <Image source={Character}
-        />
-        <Text style={{ marginBottom: 5 }}>{title}</Text>
+        <View style={{ flex: 1, flexDirection: 'row', }}>
+
+          <Image source={Character} style={{ width: 50, height: 50 }} />
+          <Text style={{ marginBottom: 5}}>{title}</Text>
+        </View>
       </View>
     </>
   );
