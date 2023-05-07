@@ -10,6 +10,14 @@
         "resourceClass": "m1-medium"
       }
     },
+    "developmentLocal": {
+      "credentialsSource": "local",
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m1-medium"
+      }
+    },
     "preview": {
       "distribution": "internal",
       "ios": {

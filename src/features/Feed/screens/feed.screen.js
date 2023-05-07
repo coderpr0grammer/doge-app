@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { View, FlatList, Text, SafeAreaView, Image } from "react-native";
+import { View, FlatList, Text, SafeAreaView, Image, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import SvgUri from "react-native-svg-uri";
-import Character from '../../../../assets/character.png'
+import Character from "../../../../assets/character.png";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 // const usersCollection = firestore().collection('posts');
 
@@ -17,13 +18,12 @@ const Feed = (props) => {
           borderBottomWidth: 1,
           borderColor: "orange",
           flex: 1,
-          padding: 10
+          padding: 10,
         }}
       >
-        <View style={{ flex: 1, flexDirection: 'row', }}>
-
+        <View style={{ flex: 1, flexDirection: "row" }}>
           <Image source={Character} style={{ width: 50, height: 50 }} />
-          <Text style={{ marginBottom: 5}}>{title}</Text>
+          <Text style={{ marginBottom: 5 }}>{title}</Text>
         </View>
       </View>
     </>
@@ -58,6 +58,27 @@ const Feed = (props) => {
             paddingBottom: 80,
           }}
         />
+        <TouchableOpacity
+          style={{
+            backgroundColor: "orange",
+            shadowColor: "#bf7e06",
+            shadowOffset: {
+              width: 0,
+              height: 4,
+            },
+            shadowOpacity: 1,
+            width: 60,
+            height: 60,
+            borderRadius: 70,
+            position: "static",
+            bottom: 150,
+            left: "80%",
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
+        >
+          <Ionicons name="add-outline" size={32} color="white" />
+        </TouchableOpacity>
       </SafeAreaView>
     </LinearGradient>
   );

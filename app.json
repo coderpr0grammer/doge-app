@@ -4,10 +4,10 @@
     "slug": "snack-0e0c60ef-c410-42f9-aa9d-2e6d36e05f61",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/doge-icon1024.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/doge-icon1024.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,8 +19,20 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.coderpr0grammer.doge"
+      "bundleIdentifier": "com.coderpr0grammer.doge",
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
+    "plugins": [
+      "@react-native-firebase/app",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
